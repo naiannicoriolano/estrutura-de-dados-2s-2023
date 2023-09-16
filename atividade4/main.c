@@ -11,13 +11,17 @@ void imprimir_arr(int arr[], int n){
 
 }
 
-int main(int argc, char*argv[]){
+int main(int argc, char* argv[]){
 
-    int arr_inteiros = {54, 26, 93, 17, 77, 31, 44, 55, 20};
+    int arr_inteiros[argc];
+
+        for(int i=0; i < argc; i++){
+            arr_inteiros[i] = atoi(argv[i+1]);
+        }
     int n = sizeof(arr_inteiros)/sizeof(int);
 
     imprimir_arr(arr_inteiros, n);
-    bubble_sort (arr_inteiros, n);
+    bubble_sort(arr_inteiros, n);
     imprimir_arr(arr_inteiros, n);
 
 
